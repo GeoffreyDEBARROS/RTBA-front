@@ -1,0 +1,24 @@
+$color1: #ECF4F3;
+$color2: #68B0AB;
+$color3: #006A71;
+$color4: #FF7E67;
+
+@font-face {
+    font-family: font1;
+    src: url(../assets/fonts/RampartOne-Regular.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(../assets/fonts/Urbanist-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+body {
+    background: $color1;
+    overflow-x: hidden;
+}

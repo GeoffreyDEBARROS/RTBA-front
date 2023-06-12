@@ -1,0 +1,13 @@
+@font-face {
+  font-family: font1;
+  src: url(../assets/fonts/RampartOne-Regular.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(../assets/fonts/Urbanist-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=index.css.map */
