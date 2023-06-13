@@ -1,6 +1,7 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    overflow: hidden;
 
     h1 {
         font-family: font1;
@@ -22,6 +23,8 @@
         position: relative;
         z-index: 100;
 
+       
+
         .burger-line {
             width: 50px;
             height: 6px;
@@ -32,7 +35,7 @@
         }
    
         .line1 {
-            width: 40px;   
+            width: 40px;  
         }
         .line1-anim {
             width: 60px;
@@ -66,14 +69,14 @@
 
     .navigation {
         position: absolute;
-        background: $color4;
-        height: 100%;
+        background: $color4;   
+        height: 100vh;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         padding: 30px;
-        transform: translateX(600px);
+        transform: translateX(-800px);
         transition: 0.5s;
 
         ul {
@@ -86,12 +89,17 @@
 
             li {
                 margin-top: 20px;
+                transition: 0.3s;
+
+                &:active {
+                    transform: scale(95%);
+                } 
             }
         }
     }
 }
 
 .navigation-display {
-    transform: translateX(0) !important;
+    transform: translate(0) !important;
 }
 

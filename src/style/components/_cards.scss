@@ -1,0 +1,61 @@
+.card {
+    margin: 50px 20px;
+    background: $color2;
+    border-radius: 20px 20px 10px 10px;
+    font-family: font2;
+    box-shadow: 10px 10px 0px -3px rgb(5, 80, 85);
+
+    .title {
+        background: $color3;
+        padding: 10px;
+        color: $color4;
+        letter-spacing: 3px;
+        border-radius:20px;
+    }  
+    .info-ba {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        color: rgb(5, 80, 85);
+    }  
+    .text-ba {
+        padding: 10px;
+        p {
+            line-height: 22px;
+            font-weight: bold;
+            color: rgb(5, 80, 85);
+        }
+    }
+    .likes {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-family: font1;
+        color: rgb(5, 80, 85);
+        font-size: 1.2rem;
+
+        .like-count {
+            background: $color4;
+            padding: 15px;
+            border-radius: 0 20px 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button {
+            padding: 15px;
+            font-family: font1;
+            background: $color4;
+            color: rgb(175, 45, 45);
+            border: none;  
+            border-radius: 20px 0 10px 0;
+            font-size: 1.8rem;
+            transition: 0.3s;
+
+            &:active {
+                color: red;
+                transform: scale(108%);
+            }
+        }
+    }
+}
