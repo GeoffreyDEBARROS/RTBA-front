@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 
 const Header = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -12,10 +13,20 @@ const Header = () => {
 
       <div className="burger-btn" onClick={handleClick}>
         <span
-          className={`burger-line line1 ${isNavigationOpen ? "line1-anim" : ""}`}
+          className={`burger-line line1 ${
+            isNavigationOpen ? "line1-anim" : ""
+          }`}
         ></span>
-        <span className={`burger-line line2 ${isNavigationOpen ? "line2-anim" : ""}`}></span>
-        <span className={`burger-line line3 ${isNavigationOpen ? "line3-anim" : ""}`}></span>
+        <span
+          className={`burger-line line2 ${
+            isNavigationOpen ? "line2-anim" : ""
+          }`}
+        ></span>
+        <span
+          className={`burger-line line3 ${
+            isNavigationOpen ? "line3-anim" : ""
+          }`}
+        ></span>
       </div>
 
       <div

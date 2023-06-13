@@ -1,0 +1,39 @@
+.footer {
+    background: $color2;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-family: font2;
+    padding: 3px;
+    border-radius: 20px 20px 0 0;
+    position: sticky;
+    border-top: 5px solid $color1;
+    transition: 0.3s;
+
+    h3 {
+        text-align: center;
+        color: rgb(5, 80, 85);
+    }
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: rgb(5, 80, 85);
+
+        ul {
+            display: flex;
+            li {
+                margin: 0 5px;
+                padding: 3px;
+
+                &:active {
+                    transform: scale(95%);
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
