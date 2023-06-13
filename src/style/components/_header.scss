@@ -4,7 +4,7 @@
 
     h1 {
         font-family: font1;
-        color: mediumseagreen;
+        color: $color3;
         font-size: 3.6rem;
         letter-spacing: 10px;
         padding-left: 18px;
@@ -22,6 +22,34 @@
         position: relative;
         z-index: 100;
 
+        .burger-line {
+            width: 50px;
+            height: 6px;
+            border-radius: 50px;
+            background: $color3;
+            margin: 4px;
+            transition: 0.5s;
+        }
+   
+        .line1 {
+            width: 40px;   
+        }
+        .line1-anim {
+            width: 60px;
+            transform: translateY(14px) rotate(45deg);
+        }
+        .line2-anim {
+            transform: translateY(-500px) rotate(900deg);
+            opacity: 0;
+        }
+        .line3 {
+            width: 40px;
+        }
+        .line3-anim {
+            width: 60px;
+            transform: translateY(-14px) rotate(135deg);
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -33,27 +61,19 @@
             top: -115px;
             right: -180px;
         }
-    
-        .burger-line {
-            width: 50px;
-            height: 6px;
-            border-radius: 50px;
-            background: $color3;
-            margin: 4px;
-        }
         
     }
 
     .navigation {
         position: absolute;
         background: $color4;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         padding: 30px;
-        transform: translateX(500px);
+        transform: translateX(600px);
         transition: 0.5s;
 
         ul {
@@ -69,10 +89,9 @@
             }
         }
     }
-
-    
 }
 
 .navigation-display {
     transform: translateX(0) !important;
 }
+

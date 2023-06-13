@@ -11,9 +11,11 @@ const Header = () => {
       <h1>RTBA</h1>
 
       <div className="burger-btn" onClick={handleClick}>
-        <span id="line1" className="burger-line"></span>
-        <span id="line2" className="burger-line"></span>
-        <span id="line3" className="burger-line"></span>
+        <span
+          className={`burger-line line1 ${isNavigationOpen ? "line1-anim" : ""}`}
+        ></span>
+        <span className={`burger-line line2 ${isNavigationOpen ? "line2-anim" : ""}`}></span>
+        <span className={`burger-line line3 ${isNavigationOpen ? "line3-anim" : ""}`}></span>
       </div>
 
       <div
