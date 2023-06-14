@@ -5,7 +5,6 @@ import moment from "moment/moment";
 
 const Cards = () => {
   const [messages, setMessages] = useState([]);
-  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
