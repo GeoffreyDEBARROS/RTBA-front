@@ -18,7 +18,7 @@ const Cards = () => {
     <div>
       {messages.map((item, index) => (
         <div className="card" key={index}>
-          <div className="title">
+          <div className="ba-title">
             <h3>{item.title}</h3>
           </div>
           <div className="info-ba">

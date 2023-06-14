@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -32,9 +33,18 @@ const Header = () => {
         className={`navigation ${isNavigationOpen ? "navigation-display" : ""}`}
       >
         <ul>
-          <li>Inscription</li>
-          <li>Connexion</li>
-          <li>Profil</li>
+          <NavLink to="/">
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink to="/inscription">
+            <li>Inscription</li>
+          </NavLink>
+          <NavLink to="/connexion">
+            <li>Connexion</li>
+          </NavLink>
+          <NavLink to="/profil">
+            <li>Profil</li>
+          </NavLink>
         </ul>
       </div>
     </div>
