@@ -26,7 +26,7 @@ const Signin = () => {
           <label htmlFor="passChecker">Vérification du mot de passe</label>
           <input type="password" id="passChecker" name="passChecker" />
           <button type="submit" onClick={handleSubmit}>
-            Je m'inscrit !
+            Je m'inscris !
           </button>
         </form>
       </div>
