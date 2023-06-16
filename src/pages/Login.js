@@ -7,9 +7,6 @@ const Login = () => {
   const navigate = useNavigate();
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
-  const [pseudo, setPseudo] = useState("");
-  const [id, setId] = useState("");
-  const [token, setToken] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -21,15 +18,10 @@ const Login = () => {
         password: password,
       });
 
-      
       const responseData = response.data; // Récupère la réponse complète
       const { pseudo, token, id } = responseData; // Extraire les valeurs du pseudo, du token et de l'id de la réponse
-      
-      console.log(response.data)
-      
-      setPseudo(pseudo);
-      setToken(token);
-      setId(id);
+
+      console.log(response.data);
 
       localStorage.setItem("pseudo", pseudo);
       localStorage.setItem("token", token);
