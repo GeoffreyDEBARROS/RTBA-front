@@ -1,6 +1,6 @@
 .card {
     margin: 50px 20px;
-    background: $color2;
+    background: rgba(104, 176, 171, 0.323);
     border-radius: 20px 20px 10px 10px;
     font-family: font2;
     box-shadow: 10px 10px 0px -3px rgb(5, 80, 85);
@@ -10,7 +10,7 @@
         padding: 10px;
         color: $color4;
         letter-spacing: 3px;
-        border-radius:20px;
+        border-radius: 20px 20px 0 0;
     }  
     .info-ba {
         display: flex;

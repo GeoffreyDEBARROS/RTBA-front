@@ -86,3 +86,15 @@ form {
         }
     }
 }
+#error, #success{
+    font-family: font2;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+#error {
+    color: rgb(188, 30, 30);
+}
+#success {
+    color: green;
+}
