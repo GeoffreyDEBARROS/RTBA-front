@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const userId = localStorage.getItem("id");
-  const [userCo, setUserCo] = useState("");
 
   const navigate = useNavigate();
 
@@ -63,6 +62,11 @@ const Header = () => {
         className={`navigation ${isNavigationOpen ? "navigation-display" : ""}`}
       >
         <ul>
+          {localStorage.getItem("token") ? (
+            <NavLink to="/raconte_ta_ba">
+              <li>Ma B.A</li>
+            </NavLink>
+          ) : null}
           <NavLink to="/">
             <li>Accueil</li>
           </NavLink>

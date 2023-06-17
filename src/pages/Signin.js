@@ -69,7 +69,7 @@ const Signin = () => {
     <div>
       <Header />
       <div className="signin">
-        <div className="title">
+        <div className="title"> 
           <h4>Inscris toi !</h4>
           <p className="sub-title">
             Étape obligatoire pour pouvoir poster tes B.A et te la pété un max .
