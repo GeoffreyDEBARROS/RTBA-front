@@ -75,7 +75,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 30px;
+        padding: 15px;
         transform: translateX(-800px);
         transition: 0.5s;
         z-index: 10;
@@ -85,7 +85,7 @@
             align-items: flex-end;
             font-family: font1;
             color: $color3;
-            font-size: 3.5rem;
+            font-size: 3.3rem;
 
             li {
                 margin-top: 20px;
