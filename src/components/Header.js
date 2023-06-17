@@ -5,21 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
-  const userId = localStorage.getItem("id");
 
   const navigate = useNavigate();
 
   const handleClick = () => {
     setIsNavigationOpen(!isNavigationOpen);
   };
-
-  useEffect(() => {
-    if (userId) {
-      axios
-        .get(`http://localhost:3001/api/users/${userId}`)
-        .then((res) => setUserCo(res.data.member));
-    }
-  }, []);
 
   // Fonction pour se déconnecter du compte //
   const decoAccount = () => {
