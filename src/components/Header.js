@@ -60,12 +60,17 @@ const Header = () => {
           <NavLink to="/">
             <li>Accueil</li>
           </NavLink>
-          <NavLink to="/inscription">
-            <li>Inscription</li>
-          </NavLink>
-          <NavLink to="/connexion">
-            <li>Connexion</li>
-          </NavLink>
+          {!localStorage.getItem("token") ? (
+            <NavLink to="/inscription">
+              <li>Inscription</li>
+            </NavLink>
+          ) : null}
+          {!localStorage.getItem("token") ? (
+            <NavLink to="/connexion">
+              <li>Connexion</li>
+            </NavLink>
+          ) : null}
+
           {localStorage.getItem("token") ? (
             <NavLink to="/profil">
               <li>Profil</li>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Profil = () => {
+  const navigate = useNavigate();
   const userId = localStorage.getItem("id");
   const [userCo, setUserCo] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
@@ -50,8 +52,8 @@ const Profil = () => {
   };
   //
 
-   // Fonction pour modifier le mot de passe du client //
-   const updatePassword = () => {
+  // Fonction pour modifier le mot de passe du client //
+  const updatePassword = () => {
     axios
       .put(`http://localhost:3001/api/users/${userId}`, {
         password: passwordInput,
@@ -63,6 +65,24 @@ const Profil = () => {
 
   const handlePasswordChange = (event) => {
     setPasswordInput(event.target.value);
+  };
+  //
+
+  // Fonction pour supprimer le compte du clien //
+  const deleteAccount = () => {
+    setTimeout(() => {
+      const confirmation = window.confirm(
+        "Êtes-vous sûr de vouloir supprimer votre compte ?"
+      );
+      if (confirmation) {
+        localStorage.removeItem("id");
+        localStorage.removeItem("name");
+        localStorage.removeItem("token");
+        axios.delete(`http://localhost:3001/api/users/${userId}`);
+        navigate("/");
+        window.location.reload();
+      }
+    }, 400);
   };
   //
 
@@ -102,6 +122,10 @@ const Profil = () => {
             />
             <button onClick={updatePassword}>Modifier mon mot de passe</button>
           </div>
+
+          <button id="delete-btn" onClick={deleteAccount}>
+            Supprimer mon compte
+          </button>
         </div>
         <p id="success-msg">{message}</p>
       </div>

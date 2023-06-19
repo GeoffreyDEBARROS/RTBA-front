@@ -1,0 +1,79 @@
+.profil {
+    h4 {
+        text-align: center;
+    }
+    .account-infos {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: font2;
+        color: rgb(5, 80, 85);
+
+        p {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .userInfos {
+            display: grid;
+            grid-gap: 5px;
+            
+            input {
+                width: 250px;
+                margin: 10px 0;
+                font-family: font2;
+                text-align: center;
+                height: 30px;
+                background: transparent;
+                border: 1px solid $color3;
+                border-radius: 10px;
+                transition: 0.1s;
+                color: rgb(5, 80, 85);
+
+                &:focus {
+                    outline: none;
+                    border: 3px solid $color2;
+                }
+            }
+            button {
+                height: 30px;
+                margin-bottom: 20px;
+                font-family: font2;
+                border: 1px solid $color3;
+                border-radius: 10px;
+                background: $color4;
+                color: rgb(5, 80, 85);
+                box-shadow: 7px 7px 0px -3px rgb(5, 80, 85);
+                transition: 0.3s;
+                &:active {
+                    box-shadow: 5px 5px 0px -3px rgb(5, 80, 85);
+                    transform: scale(98%);
+                }
+            }
+        }
+
+        #delete-btn {
+            height: 35px;
+            width: 250px;
+            margin-top: 20px;
+            background: rgba(233, 34, 34, 0.787);
+            border: 1px solid rgb(5, 80, 85);
+            font-family: font2;
+            color: rgb(5, 80, 85);
+            border-radius: 10px;
+            box-shadow: 7px 7px 0px -3px rgb(5, 80, 85);
+            transition: 0.3s;
+            &:active {
+                box-shadow: 5px 5px 0px -3px rgb(5, 80, 85);
+                transform: scale(98%);
+            }
+        }
+    }
+    #success-msg {
+        text-align: center;
+        font-family: font2;
+        color: green;
+    }
+}

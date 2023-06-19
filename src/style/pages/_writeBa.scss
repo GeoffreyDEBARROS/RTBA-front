@@ -1,0 +1,18 @@
+.Write-ba {
+    h4 {
+        text-align: center;
+    }
+    textarea {
+        border-radius: 8px;
+        resize: none;
+        padding: 5px;
+        font-family: font2;
+        border: 2px solid $color3;
+        box-shadow: 7px 7px 0px -3px rgb(5, 80, 85);
+        transition: 0.3s;
+        &:focus {
+            outline: none;
+            box-shadow: 5px 5px 0px -3px rgb(5, 80, 85);
+        }
+    }
+}

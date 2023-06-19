@@ -21,7 +21,7 @@ const Cards = () => {
             <h3>{item.title}</h3>
           </div>
           <div className="info-ba">
-            <span>B.A de : {item.user_id}</span>
+            <span>B.A de : {item.pseudo}</span>
             <span>{moment(item.created_at).format('DD/MM/YY')}</span>
           </div>
           <div className="text-ba">

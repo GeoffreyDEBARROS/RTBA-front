@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -55,6 +57,7 @@ const Signin = () => {
           success.innerHTML = "Compte créé !";
           setTimeout(() => {
             success.innerHTML = "";
+            navigate("/connexion");
           }, 2000);
         } else {
           throw new Error("Erreur lors de la création du compte");
@@ -69,7 +72,7 @@ const Signin = () => {
     <div>
       <Header />
       <div className="signin">
-        <div className="title"> 
+        <div className="title">
           <h4>Inscris toi !</h4>
           <p className="sub-title">
             Étape obligatoire pour pouvoir poster tes B.A et te la pété un max .
