@@ -6,12 +6,26 @@
     box-shadow: 10px 10px 0px -3px rgb(5, 80, 85);
 
     .ba-title {
+        display: flex;
+        justify-content: space-between;
         background: $color3;
         padding: 10px;
         color: $color4;
         letter-spacing: 3px;
         border-radius: 20px 20px 0 0;
     }  
+    #delete-ba {
+        background: none;
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        color: $color1;
+        margin-right: 10px;
+        transition: 0.3s;
+        &:active {
+            color: red;
+        }
+    }
     .info-ba {
         display: flex;
         justify-content: space-between;

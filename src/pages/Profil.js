@@ -100,7 +100,7 @@ const Profil = () => {
               value={userCo.pseudo}
               onChange={handleNameChange}
             />
-            <button onClick={updateName}>Modifier mon prénom</button>
+            <button onClick={updateName}>Modifier mon pseudo</button>
           </div>
 
           <div className="userInfos">
