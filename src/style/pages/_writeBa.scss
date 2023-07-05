@@ -1,4 +1,9 @@
 .Write-ba {
+    @media screen and (min-width:799px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     h4 {
         text-align: center;
     }

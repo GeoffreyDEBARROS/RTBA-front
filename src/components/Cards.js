@@ -24,7 +24,6 @@ const Cards = () => {
   // Fonction pour supprimer la BA //
   const deleteBA = (messageId) => {
     setTimeout(() => {
-      console.log(messageId);
       const confirmation = window.confirm(
         "Êtes-vous sûr de vouloir supprimer votre BA ?"
       );
@@ -38,7 +37,7 @@ const Cards = () => {
   //
 
   return (
-    <div>
+    <div className="card-container">
       {messages.map((item, index) => (
         <div className="card" key={index}>
           <div className="ba-title">

@@ -3,6 +3,12 @@
     justify-content: space-between; 
     overflow: hidden;
 
+    @media screen and (min-width:799px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     h1 {
         font-family: font1;
         color: $color3;
@@ -10,9 +16,13 @@
         letter-spacing: 10px;
         padding-left: 18px;
         margin: 15px;
+        @media screen and (min-width:799px) {
+            margin-bottom: 50px;
+            color: $color4;
+        }
     }
 
-    .burger-btn {
+    .burger-btn { 
         margin: 15px;
         padding-top: 10px;
         height: 100%;
@@ -23,8 +33,10 @@
         position: relative;
         z-index: 100;
 
-       
-
+        @media screen and (min-width:799px) {
+            display: none;
+        }
+        
         .burger-line {
             width: 50px;
             height: 6px;
@@ -95,6 +107,33 @@
                 &:active {
                     transform: scale(95%);
                 } 
+                @media screen and (min-width:1200px) {
+                    &:hover {
+                        cursor: pointer;
+                        color: $color4;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width:799px) {
+            transform: translateX(0);
+            height: 80px;
+            top: 100px;
+            background: none;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px;
+
+            ul {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                font-size: 2.5rem;
+                
+                li {
+                    margin: 10px;
+                }
             }
         }
     }

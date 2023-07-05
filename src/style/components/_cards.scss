@@ -1,9 +1,29 @@
+.card-container {
+    @media screen and (min-width:799px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (min-width:1200px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 .card {
     margin: 50px 20px;
     background: rgba(104, 176, 171, 0.323);
     border-radius: 20px 20px 10px 10px;
     font-family: font2;
     box-shadow: 10px 10px 0px -3px rgb(5, 80, 85);
+    max-width: 800px;
+    @media screen and (min-width:799px) {
+        min-width: 800px;
+    }
+    @media screen and (min-width:1200px) {
+        min-width: 400px;
+        max-width: 500px;
+    }
 
     .ba-title {
         display: flex;
@@ -24,6 +44,12 @@
         transition: 0.3s;
         &:active {
             color: red;
+        }
+        @media screen and (min-width:1200px) {
+            &:hover {
+                cursor: pointer;
+                color: red;
+            }
         }
     }
     .info-ba {
@@ -70,6 +96,14 @@
                 color: red;
                 transform: scale(108%);
             }
+
+            @media screen and (min-width:1200px) {
+                &:hover {
+                    cursor: pointer;
+                    color: red;
+                }
+            }
         }
     }
+}
 }

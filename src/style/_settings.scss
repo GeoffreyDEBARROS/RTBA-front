@@ -84,6 +84,15 @@ form {
             box-shadow: 5px 5px 0px -3px rgb(5, 80, 85);
             transform: scale(98%);
         }
+        @media screen and (min-width:1200px) {
+            &:hover {
+                cursor: pointer;
+                background: #f26850;
+            }
+        }
+    }
+    @media screen and (min-width:799px) {
+        width: 500px;
     }
 }
 #error, #success{
@@ -97,4 +106,13 @@ form {
 }
 #success {
     color: green;
+}
+.signin, .login {
+    @media screen and (min-width:799px) {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

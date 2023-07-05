@@ -29,6 +29,11 @@
                 &:active {
                     transform: scale(95%);
                 }
+                @media screen and (min-width:1200px) {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
