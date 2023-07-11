@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 const Cards = () => {
   const navigate = useNavigate();
   const [messages, setMessages] = useState([]);
-  const [messageId, setMessageId] = useState("");
   const pseudo = localStorage.getItem("pseudo");
+  const role = localStorage.getItem("role");
 
   useEffect(() => {
     axios
@@ -42,7 +42,7 @@ const Cards = () => {
         <div className="card" key={index}>
           <div className="ba-title">
             <h3>{item.title}</h3>
-            {pseudo && pseudo === item.pseudo && (
+            {(role === "admin" || pseudo === item.pseudo) && (
               <button onClick={() => deleteBA(item.id)} id="delete-ba">
                 &#x2716;
               </button>

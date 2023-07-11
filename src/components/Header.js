@@ -20,6 +20,7 @@ const Header = () => {
       localStorage.removeItem("id");
       localStorage.removeItem("pseudo");
       localStorage.removeItem("token");
+      localStorage.removeItem("role");
       navigate("/");
       window.location.reload();
     }

@@ -19,14 +19,15 @@ const Login = () => {
       });
 
       const responseData = response.data; // Récupère la réponse complète
-      const { pseudo, token, id } = responseData; 
-
+      const { pseudo, token, id, role } = responseData;
+  
       localStorage.setItem("pseudo", pseudo);
       localStorage.setItem("token", token);
       localStorage.setItem("id", id);
+      localStorage.setItem("role", role);
       setMail("");
       setPassword("");
-      setMessage("Connecté !")
+      setMessage("Connecté !");
       setTimeout(() => {
         navigate("/");
       }, 1500);
