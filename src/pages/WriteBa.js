@@ -11,7 +11,7 @@ const WriteBa = () => {
   useEffect(() => {
     axios
       .get(`http://localhost:3001/api/users/${userId}`)
-      .then((res) => setUserCo(res.data.member));
+      .then((res) => setUserCo(res.data.member)); 
   }, [userId]);
 
   const handleSubmit = (e) => {
@@ -37,24 +37,23 @@ const WriteBa = () => {
       return;
     }
 
-    fetch("http://localhost:3001/api/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
+    axios
+      .post("http://localhost:3001/api/messages", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((response) => {
-        if (response.ok) {
+        if (response.status === 200) {
           setTimeout(() => {
             setMessage("");
           }, 2000);
         } else {
-          throw new Error("Erreur lors de la création du compte");
+          throw new Error("Erreur lors du post de la BA");
         }
       })
       .catch((error) => {
-        console.error(error); // Gestion des erreurs
+        console.error(error);
       });
   };
 

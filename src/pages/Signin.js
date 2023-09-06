@@ -14,10 +14,10 @@ const Signin = () => {
     const error = document.getElementById("error");
     const success = document.getElementById("success");
 
-    const data = {
+    const data = { 
       pseudo: pseudo,
       mail: mail,
-      password: password,
+      password: password, 
       passChecker: passChecker,
     };
 
@@ -47,7 +47,7 @@ const Signin = () => {
 
     fetch("http://localhost:3001/api/users", {
       method: "POST",
-      headers: {
+      headers: { 
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),

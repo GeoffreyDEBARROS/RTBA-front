@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
-
+  const role = localStorage.getItem("role");
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -55,7 +55,12 @@ const Header = () => {
         <ul>
           {localStorage.getItem("token") ? (
             <NavLink to="/raconte_ta_ba">
-              <li>Ma B.A</li>
+              <li>Nouvelle B.A</li>
+            </NavLink>
+          ) : null}
+          {localStorage.getItem("token") && (role == "member") ? (
+            <NavLink to="/mes_BAs">
+              <li>Mes B.A's</li>
             </NavLink>
           ) : null}
           <NavLink to="/">

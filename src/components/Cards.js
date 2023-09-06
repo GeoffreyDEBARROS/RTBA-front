@@ -8,7 +8,6 @@ const Cards = () => {
   const [messages, setMessages] = useState([]);
   const pseudo = localStorage.getItem("pseudo");
   const role = localStorage.getItem("role");
-
   useEffect(() => {
     axios
       .get("http://localhost:3001/api/messages")

@@ -20,7 +20,7 @@ const Login = () => {
 
       const responseData = response.data; // Récupère la réponse complète
       const { pseudo, token, id, role } = responseData;
-  
+
       localStorage.setItem("pseudo", pseudo);
       localStorage.setItem("token", token);
       localStorage.setItem("id", id);
