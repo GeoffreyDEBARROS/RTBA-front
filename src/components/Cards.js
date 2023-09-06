@@ -35,6 +35,26 @@ const Cards = () => {
   };
   //
 
+  // Fonction pour like une BA //
+  const likeBa = (messageId) => {
+    axios
+      .put(`http://localhost:3001/api/messages/${messageId}/like`)
+      .then((res) => {
+        // Mise à jour de l'état avec le nouveau nombre de likes
+        const updatedMessages = messages.map((message) => {
+          if (message.id === messageId) {
+            return { ...message, likes_count: message.likes_count + 1 };
+          }
+          return message;
+        });
+        setMessages(updatedMessages);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  //
+
   return (
     <div className="card-container">
       {messages.map((item, index) => (
@@ -55,8 +75,8 @@ const Cards = () => {
             <p>{item.content}</p>
           </div>
           <div className="likes">
-            <div className="like-count">8 likes</div>
-            <button>&#x2764;</button>
+            <div className="like-count">{item.likes_count} likes</div>
+            <button onClick={() => likeBa(item.id)}>&#x2764;</button>
           </div>
         </div>
       ))}
