@@ -15,7 +15,7 @@ const Footer = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
+    return () => { 
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);

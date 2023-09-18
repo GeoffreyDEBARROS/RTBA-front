@@ -18,8 +18,8 @@ const Login = () => {
         password: password,
       });
 
-      const responseData = response.data; // Récupère la réponse complète
-      const { pseudo, token, id, role } = responseData;
+      // const responseData = response.data; // Récupère la réponse complète
+      const { pseudo, token, id, role } = response.data;
 
       localStorage.setItem("pseudo", pseudo);
       localStorage.setItem("token", token);
